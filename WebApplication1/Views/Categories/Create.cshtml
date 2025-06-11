@@ -1,0 +1,17 @@
+﻿@model Category
+<h1>Create</h1>
+<form method="post" action="/categories/add">
+	<div class="mb-3"> 
+
+	<input type="text" name="Name"  placeholder="category name" class="form-control" value="@Model.Name"/>
+	<span class="text-danger" asp-validation-for="Name"></span>
+	</div>
+
+	<div>
+
+	<textarea name="Description" placeholder="category desc." class="form-control">@Model.Description</textarea>
+	<button  type="submit" class="btn btn-outline-primary">Save</button>
+		<span class="text-danger" asp-validation-for="Description"></span>
+	</div>
+
+		</form>
